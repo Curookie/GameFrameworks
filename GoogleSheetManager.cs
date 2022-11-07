@@ -8,8 +8,7 @@ namespace Curookie.Util
     public class GoogleSheetManager : MonoBehaviour 
     {
     #region VARIABLES & PROPERTIES
-        public string URL = "";
-        readonly string DATA_SHEET_URL = $"{URL}/export?format=tsv";
+        public string googleSheetURL = "";
     #endregion
 
     #region UNITY_EVENTS
@@ -17,11 +16,11 @@ namespace Curookie.Util
 
     #region MAIN_FUNCTIONS
         IEnumerator DownloadDatas() {
-            UnityWebRequest www = UnityWebRequest.Get(DATA_SHEET_URL);
+            UnityWebRequest www = UnityWebRequest.Get($"{googleSheetURL}/export?format=tsv");
             yield return www.SendWebRequest();
 
-            if(www.isNetworkError || www.isHttpError) {
-                Debug.Error($"ERROR: {www.error}");
+            if(www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError) {
+                Debug.LogError($"ERROR: {www.error}");
             } 
 
             var data = www.downloadHandler.text;
