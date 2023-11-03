@@ -1,5 +1,4 @@
 using System;
-using System.Diagnostics;
 using UnityEngine;
 
 namespace GameFrameworks
@@ -29,12 +28,12 @@ namespace GameFrameworks
         }
 
 
-        [Conditional("DEBUG_MODE")]
+        [System.Diagnostics.Conditional("DEBUG_MODE")]
         public static void Log(object _obj, PrintLogType _logType = PrintLogType.Common) {
             Log(_obj.ToString(), _logType);
         }
 
-        [Conditional("DEBUG_MODE")]
+        [System.Diagnostics.Conditional("DEBUG_MODE")]
         public static void Log(string _str, PrintLogType _logType = PrintLogType.Common)
         {
 #if UNITY_EDITOR
@@ -47,17 +46,17 @@ namespace GameFrameworks
 
             void _Log()
             {
-                _str = SBuilder.Append_Func(_logType.ToString(), COLON, _str);
+                _str = SBuilder.Append(_logType.ToString(), COLON, _str);
                 Debug.Log(_str);
             }
         }
 
-        [Conditional("DEBUG_MODE")]
+        [System.Diagnostics.Conditional("DEBUG_MODE")]
         public static void Warning(object _obj, PrintLogType _logType = PrintLogType.Common)
         {
             Warning(_obj.ToString(), _logType);
         }
-        [Conditional("DEBUG_MODE")]
+        [System.Diagnostics.Conditional("DEBUG_MODE")]
         public static void Warning(string _str, PrintLogType _logType = PrintLogType.Common)
         {
 #if UNITY_EDITOR
@@ -69,17 +68,17 @@ namespace GameFrameworks
 
             void _Log()
             {
-                _str = SBuilder.Append_Func(_logType.ToString(), COLON, _str);
+                _str = SBuilder.Append(_logType.ToString(), COLON, _str);
                 Debug.LogWarning(_str);
             }
         }
 
-        [Conditional("DEBUG_MODE")]
+        [System.Diagnostics.Conditional("DEBUG_MODE")]
         public static void Error(object _obj, PrintLogType _logType = PrintLogType.Common)
         {
             Error(_obj.ToString(), _logType);
         }
-        [Conditional("DEBUG_MODE")]
+        [System.Diagnostics.Conditional("DEBUG_MODE")]
         public static void Error(string _str, PrintLogType _logType = PrintLogType.Common)
         {
 #if UNITY_EDITOR
@@ -91,7 +90,7 @@ namespace GameFrameworks
 
             void _Log()
             {
-                _str = SBuilder.Append_Func(_logType.ToString(), COLON, _str);
+                _str = SBuilder.Append(_logType.ToString(), COLON, _str);
                 Debug.LogError(_str);
             }
         }
