@@ -8,6 +8,7 @@ namespace GameFrameworks
 
     public class UI_Button : Button, IBaseUI
     {
+
         public AnimType animType = AnimType.NONE;
     }
 }
