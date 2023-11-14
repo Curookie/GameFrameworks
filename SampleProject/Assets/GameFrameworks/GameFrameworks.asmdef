@@ -2,7 +2,9 @@
     "name": "GameFrameworks",
     "rootNamespace": "",
     "references": [
-        "Unity.TextMeshPro"
+        "Unity.TextMeshPro",
+        "MaxSdk.Scripts",
+        "UniRx"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

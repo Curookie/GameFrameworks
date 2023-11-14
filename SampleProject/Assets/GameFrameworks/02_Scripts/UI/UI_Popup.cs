@@ -8,10 +8,10 @@ namespace GameFrameworks
 {
 	public class UI_Popup : MonoBehaviour
 	{
-		[NonSerialized] public PopupState _PopupSate;
+		[NonSerialized] public PopupState _PopupState;
 		protected Action _callBack;
 
-		public void SetPopup(PopupState popUpState) => _PopupSate = popUpState;
+		public void SetPopup(PopupState popUpState) => _PopupState = popUpState;
 		
 		public virtual void ShowUI()
 		{
