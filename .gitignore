@@ -8,6 +8,7 @@ SampleProject/[Oo]bj/
 SampleProject/[Bb]uild/
 SampleProject/[Bb]uilds/
 SampleProject/[Ll]ogs/
+SampleProject/[Uu]ser[Ss]ettings/
 SampleProject/[Mm]emoryCaptures/
 SampleProject/[Rr]ecordings/
 
@@ -57,10 +58,22 @@ SampleProject/sysinfo.txt
 
 # Builds
 SampleProject/*.apk
+SampleProject/*.aab
 SampleProject/*.unitypackage
+SampleProject/*.app
 
 # Crashlytics generated file
 SampleProject/crashlytics-build.properties
 
-# DWLT
-SampleProject/UserSettings/*
+# Packed Addressables
+SampleProject/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+
+# Temporary auto-generated Android Assets
+SampleProject/[Aa]ssets/[Ss]treamingAssets/build_info*
+
+# MacOS Setting
+.DS_Store
+
+# ETC
+*.keystore
+SampleProject/Build_BurstDebugInformation_DoNotShip/

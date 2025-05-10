@@ -1,0 +1,31 @@
+{
+    "name": "GameFrameworks.Editor",
+    "rootNamespace": "GameFrameworks",
+    "references": [
+        "GameFrameworks",
+        "Unity.TextMeshPro",
+        "Unity.TextMeshPro.Editor",
+        "AYellowpaper.SerializedCollections",
+        "MAScripts",
+        "Unity.InputSystem",
+        "Unity.Mathematics",
+        "DOTween.Modules",
+        "DOTweenPro.Scripts",
+        "Unity.2D.Psdimporter.Editor",
+        "Unity.2D.Aseprite.Editor",
+        "Unity.Timeline.Editor",
+        "Unity.Timeline",
+        "I2"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
